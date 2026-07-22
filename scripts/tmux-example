@@ -1,0 +1,37 @@
+#!/usr/bin/env zsh
+# This is an example of how a possible tmux script looks like.
+
+session_name="paceman"
+
+code ~/Developer/pacemangg/mobile-app
+code ~/Developer/pacemangg/push-notifications-service
+
+if ! tmux has-session -t "$session_name" 2>/dev/null; then
+  tmux new-session -d -s "$session_name" -n "dev"
+
+  tmux split-window -h -p 50
+  tmux select-pane -t 0
+  tmux send-keys "cd ~/Developer/pacemangg/mobile-app && npx expo start -c" Enter
+
+  tmux select-pane -t 1
+  tmux send-keys "cd ~/Developer/pacemangg/push-notifications-service && npm run dev" Enter
+
+  tmux new-window -n "services"
+  # Create 1x1 + 1x2 grid for server
+  tmux split-window -h -p 50        # left/right
+
+  # Left Pane (PushNotificationsService)
+  tmux select-pane -t 0
+  tmux send-keys "cd ~/Developer/pacemangg/push-notifications-service && docker compose up -d" Enter
+
+  # Top Right Pane (ActiveRunsService)
+  tmux select-pane -t 1
+  tmux send-keys "cd ~/Developer/pacemangg/active-runs-service && npm run dev" Enter
+
+  tmux select-window -t "dev"
+  tmux attach-session -t "$session_name"
+else
+  tmux attach-session -t "$session_name"
+fi
+
+tmux select-window -t "dev"

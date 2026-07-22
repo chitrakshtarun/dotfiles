@@ -1,0 +1,17 @@
+# NVM-managed versions
+20
+22
+23
+24
+
+# Global packages wanted on the current/default Node
+corepack
+eas-cli
+npm
+rnsec
+
+# Other JavaScript package managers
+pnpm
+yarn
+bun
+

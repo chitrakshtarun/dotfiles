@@ -1,0 +1,13 @@
+cocoapods
+fastfetch
+fastlane
+ffmpeg
+gh
+maven
+neofetch
+python@3.13
+redis
+tmux
+uv
+watchman
+

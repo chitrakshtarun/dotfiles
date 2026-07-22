@@ -1,0 +1,6 @@
+# Git per-user configuration snapshot.
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+

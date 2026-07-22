@@ -1,0 +1,4 @@
+codex
+ngrok
+zulu@17
+

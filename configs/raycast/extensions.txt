@@ -1,0 +1,6 @@
+# Names only; generated extension bundles are intentionally excluded.
+MiniSim
+Clean Keyboard
+ray.so
+Svgl
+

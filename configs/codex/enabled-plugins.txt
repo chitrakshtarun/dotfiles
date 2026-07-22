@@ -1,0 +1,11 @@
+browser@openai-bundled
+documents@openai-primary-runtime
+expo@claude-plugins-official
+expo@openai-curated
+pdf@openai-primary-runtime
+presentations@openai-primary-runtime
+sites@openai-bundled
+spreadsheets@openai-primary-runtime
+template-creator@openai-primary-runtime
+visualize@openai-bundled
+

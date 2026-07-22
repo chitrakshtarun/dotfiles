@@ -1,0 +1,48 @@
+# Android and Java related exports
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator 
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Oh My Zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Docker Desktop CLI completions. This intentionally preserves the duplicate
+# compinit behavior present in the source config.
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+
+# Preserved source behavior; see README known issues.
+export TERM=xterm-256color
+
+# iOS Simulator set time
+simtime() {
+  if [ "$1" = "clear" ]; then
+    xcrun simctl status_bar "booted" clear
+    echo "Simulator time reset."
+  else
+    xcrun simctl status_bar "booted" override --time "$1"
+    echo "Simulator time set to $1"
+  fi
+}
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+
