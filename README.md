@@ -8,7 +8,7 @@ This is **not** a deployment system. Nothing here is linked, sourced, installed,
 
 ## Current contents
 
-- `configs/`: shell, Git, Ghostty, tmux, VS Code-family editor, GitHub CLI, SSH, Raycast, and portable Codex references.
+- `configs/`: shell, Git, Ghostty, tmux, VS Code, T3 Code, GitHub CLI, SSH, Raycast, and portable Codex references.
 - `inventory/`: historical machine, application, Homebrew, and source-audit snapshot.
 - `manifests/`: unpinned application, package, runtime, extension, font, and agent-skill intent.
 - `scripts/`: example automation patterns for manual adaptation.
@@ -21,7 +21,9 @@ This is **not** a deployment system. Nothing here is linked, sourced, installed,
 
 ## Custom One Dark Pro
 
-[`configs/editors/vscode/settings.jsonc`](configs/editors/vscode/settings.jsonc) is a VS Code-family settings snapshot captured from Cursor. It selects `One Dark Pro` and applies true-black backgrounds, `#3b3b3b` borders, and a custom ANSI terminal palette across the editor, sidebar, activity bar, title bar, tabs, status bar, panels, menus, lists, widgets, breadcrumbs, and peek views.
+[`configs/vscode/settings.jsonc`](configs/vscode/settings.jsonc) is a VS Code-family settings snapshot captured from Cursor. It selects `One Dark Pro` and applies true-black backgrounds, `#3b3b3b` borders, and a custom ANSI terminal palette across the editor, sidebar, activity bar, title bar, tabs, status bar, panels, menus, lists, widgets, breadcrumbs, and peek views.
+
+[`configs/t3code/theme.json`](configs/t3code/theme.json) replicates a similar custom One Dark Pro theme for T3 code.
 
 The theme requires `zhuangtongfa.material-theme`; Material icons require `cweijan.cweijan-personal-material-icon-theme`. Both appear in [`configs/editors/vscode/extensions.txt`](configs/editors/vscode/extensions.txt).
 
