@@ -22,16 +22,18 @@
 - Git 2.50.1 (Apple Git-155), GitHub CLI 2.95.0
 - Ghostty 1.3.1, tmux 3.6b
 
-## macoS Preferences
+## macOS Preferences
 
 - Appearance: Dark
 - Key repeat: 2; initial key repeat: 15
+- Press-and-hold accent picker: disabled (held keys repeat)
 - Finder preferred view: columns
 - Finder path bar: enabled
 - Finder status bar: disabled
 - Finder default search scope: current folder
 - Dock tile size: 51
 - Dock recent applications: disabled
+- Dock size: locked (`size-immutable`)
 - Screenshots: `~/Pictures/Screenshots`
 - Tap to click: enabled
 - Secondary click: enabled
