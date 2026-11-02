@@ -1,0 +1,10 @@
+# Guard against copying secrets or machine state into this public repo.
+.DS_Store
+.env*
+*.pem
+*.key
+id_*
+!*.example
+**/secrets/
+**/clerk/
+*.sqlite*
